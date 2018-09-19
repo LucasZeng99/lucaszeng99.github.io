@@ -17,12 +17,12 @@
 
 
 
-  <meta name="description" content="Prospective"/>
+  <meta name="description" content="Jquery: How 'define' Works"/>
 
 
 
 
-  <meta name="keywords" content="others, Lucas Zeng" />
+  <meta name="keywords" content="javascript, jquery, Lucas Zeng" />
 
 
 
@@ -42,7 +42,7 @@
 
 
 
-<link rel="canonical" href="https://lucaszeng99.github.io/2018/03/08/prospective/"/>
+<link rel="canonical" href="https://lucaszeng99.github.io/2018/09/16/jquery-note-define/"/>
 
 
 
@@ -86,10 +86,10 @@
 
 
 <script>
-  window.config = {"title":"Lucas Zeng","subtitle":null,"description":null,"author":"Lucas Zeng","language":"en","timezone":null,"url":"https://lucaszeng99.github.io","root":"/","permalink":":year/:month/:day/:title/","permalink_defaults":null,"source_dir":"source","public_dir":"public","tag_dir":"tags","archive_dir":"archives","category_dir":"categories","code_dir":"downloads/code","i18n_dir":":lang","skip_render":null,"new_post_name":":title.md","default_layout":"post","titlecase":false,"external_link":true,"filename_case":0,"render_drafts":false,"post_asset_folder":false,"relative_link":false,"future":true,"highlight":{"enable":true,"auto_detect":false,"line_number":true,"tab_replace":null,"first_line_number":"always1"},"default_category":"uncategorized","category_map":null,"tag_map":null,"date_format":"YYYY-MM-DD","time_format":"HH:mm:ss","per_page":10,"pagination_dir":"page","theme":"even","deploy":{"type":"git","repo":"https://github.com/LucasZeng99/lucaszeng99.github.io.git"},"ignore":[],"keywords":null,"index_generator":{"per_page":10,"order_by":"-date","path":""},"archive_generator":{"per_page":10,"yearly":true,"monthly":true,"daily":false},"category_generator":{"per_page":10},"tag_generator":{"per_page":10},"marked":{"gfm":true,"pedantic":false,"sanitize":false,"tables":true,"breaks":true,"smartLists":true,"smartypants":true,"modifyAnchors":"","autolink":true},"server":{"port":4000,"log":false,"compress":false,"header":true},"since":2017,"favicon":"/favicon.ico","rss":"default","menu":{"Home":"/","Archives":"/archives/","About":"/about"},"color":"cobalt blue","mode":"default","toc":true,"fancybox":true,"pjax":true,"copyright":{"enable":true,"license":"<a rel=\"license\" href=\"https://creativecommons.org/licenses/by-nc-nd/4.0/\" target=\"_blank\">CC BY-NC-ND 4.0</a>"},"reward":{"enable":false,"qrCode":{"wechat":null,"alipay":null}},"social":{"email":"lucaszeng99@gmail.com","stack-overflow":null,"twitter":"https://twitter.com/lucas_zzc","facebook":null,"linkedin":null,"google":null,"github":"https://github.com/LucasZeng99","weibo":null,"zhihu":null,"douban":null,"pocket":null,"tumblr":null,"instagram":null},"leancloud":{"app_id":null,"app_key":null},"baidu_analytics":null,"baidu_verification":null,"google_analytics":null,"google_verification":null,"disqus_shortname":null,"changyan":{"appid":null,"appkey":null},"livere_datauid":null,"version":"2.10.1"};
+  window.config = {"title":"Lucas Zeng","subtitle":null,"description":null,"author":"Lucas Zeng","language":"en","timezone":null,"url":"https://lucaszeng99.github.io","root":"/","permalink":":year/:month/:day/:title/","permalink_defaults":null,"source_dir":"source","public_dir":"public","tag_dir":"tags","archive_dir":"archives","category_dir":"categories","code_dir":"downloads/code","i18n_dir":":lang","skip_render":null,"new_post_name":":title.md","default_layout":"post","titlecase":false,"external_link":true,"filename_case":0,"render_drafts":false,"post_asset_folder":false,"relative_link":false,"future":true,"highlight":{"enable":true,"auto_detect":false,"line_number":true,"tab_replace":null,"first_line_number":"always1"},"default_category":"uncategorized","category_map":null,"tag_map":null,"date_format":"YYYY-MM-DD","time_format":"HH:mm:ss","per_page":10,"pagination_dir":"page","theme":"even","deploy":{"type":"git","repo":"https://github.com/LucasZeng99/lucaszeng99.github.io.git"},"ignore":[],"keywords":null,"index_generator":{"per_page":10,"order_by":"-date","path":""},"category_generator":{"per_page":10},"archive_generator":{"per_page":10,"yearly":true,"monthly":true,"daily":false},"tag_generator":{"per_page":10},"marked":{"gfm":true,"pedantic":false,"sanitize":false,"tables":true,"breaks":true,"smartLists":true,"smartypants":true,"modifyAnchors":"","autolink":true},"server":{"port":4000,"log":false,"compress":false,"header":true},"since":2017,"favicon":"/favicon.ico","rss":"default","menu":{"Home":"/","Archives":"/archives/","About":"/about"},"color":"cobalt blue","mode":"default","toc":true,"fancybox":true,"pjax":true,"copyright":{"enable":true,"license":"<a rel=\"license\" href=\"https://creativecommons.org/licenses/by-nc-nd/4.0/\" target=\"_blank\">CC BY-NC-ND 4.0</a>"},"reward":{"enable":false,"qrCode":{"wechat":null,"alipay":null}},"social":{"email":"lucaszeng99@gmail.com","stack-overflow":null,"twitter":"https://twitter.com/lucas_zzc","facebook":null,"linkedin":null,"google":null,"github":"https://github.com/LucasZeng99","weibo":null,"zhihu":null,"douban":null,"pocket":null,"tumblr":null,"instagram":null},"leancloud":{"app_id":null,"app_key":null},"baidu_analytics":null,"baidu_verification":null,"google_analytics":null,"google_verification":null,"disqus_shortname":null,"changyan":{"appid":null,"appkey":null},"livere_datauid":null,"version":"2.10.1"};
 </script>
 
-    <title> Prospective - Lucas Zeng </title>
+    <title> Jquery: How 'define' Works - Lucas Zeng </title>
   </head>
 
   <body><div id="mobile-navbar" class="mobile-navbar">
@@ -187,13 +187,13 @@
     <header class="post-header">
       <h1 class="post-title">
         
-          Prospective
+          Jquery: How 'define' Works
         
       </h1>
 
       <div class="post-meta">
         <span class="post-time">
-          2018-03-08
+          2018-09-16
         </span>
         
         
@@ -205,7 +205,7 @@
   <div class="post-toc" id="post-toc">
     <h2 class="post-toc-title">Contents</h2>
     <div class="post-toc-content">
-      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#2018-5-2018-9"><span class="toc-text">2018.5 - 2018.9</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#main-goal-Vue-js"><span class="toc-text">main goal: Vue.js</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Second-goal-English"><span class="toc-text">Second goal: English</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#2018-9-2019-4"><span class="toc-text">2018.9 - 2019.4</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Priority"><span class="toc-text">Priority:</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#prospective"><span class="toc-text">prospective</span></a></li></ol></li></ol>
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Related-websites"><span class="toc-text">Related websites:</span></a></li></ol>
     </div>
   </div>
 
@@ -213,41 +213,9 @@
 
     <div class="post-content">
       
-        <p>what should I do?</p>
-<p>half a year has gone since I came to university of alberta, and it is time for me to really start building up personal projects.</p>
-<p>But hang on, that’s only after I sort out the plan for the next two years.</p>
-<a id="more"></a>
-<h1 id="2018-5-2018-9"><a href="#2018-5-2018-9" class="headerlink" title="2018.5 - 2018.9"></a>2018.5 - 2018.9</h1><h2 id="main-goal-Vue-js"><a href="#main-goal-Vue-js" class="headerlink" title="main goal: Vue.js"></a>main goal: Vue.js</h2><blockquote>
-<p>A project based on Vue cli</p>
-</blockquote>
-<ul>
-<li>familiarize with node web app development.</li>
-<li>expose to http GET/POST APIs.</li>
-<li>CSS styling and js animation practice.</li>
-</ul>
-<blockquote>
-<p>Algorithms</p>
-</blockquote>
-<ul>
-<li>learn them, just for knowing the fundamentals.</li>
-</ul>
-<blockquote>
-<p>Docs reading.</p>
-</blockquote>
-<ul>
-<li>keep forking and read as much as possible.</li>
-<li>reading the MDN web APIs. try to make sense in the forked projects.</li>
-</ul>
-<h2 id="Second-goal-English"><a href="#Second-goal-English" class="headerlink" title="Second goal: English"></a>Second goal: English</h2><p>I do not want to break my own heart, so even if I did not enter co-op program I will still have even more time to train my english.</p>
-<p>If I did, allow me to congrat myself. </p>
-<blockquote>
-<p>we’ll see.</p>
-</blockquote>
-<h1 id="2018-9-2019-4"><a href="#2018-9-2019-4" class="headerlink" title="2018.9 - 2019.4"></a>2018.9 - 2019.4</h1><h2 id="Priority"><a href="#Priority" class="headerlink" title="Priority:"></a>Priority:</h2><p>I will leave this blank for now. who knows what will happen to me.</p>
-<hr>
-<h2 id="prospective"><a href="#prospective" class="headerlink" title="prospective"></a>prospective</h2><p>I am a student, an engineering student. It matters not where I am studying, but what I am doing right now.</p>
-<p>Admit the disadvantage as an international, accept the worst consequence of my ignorance, and move on.</p>
-<p>by Lucas Zeng</p>
+        <p>notes reading jquery, exploring <code>define</code> function.<br><a id="more"></a></p>
+<h2 id="Related-websites"><a href="#Related-websites" class="headerlink" title="Related websites:"></a>Related websites:</h2><p>requirejs example:<br><a href="https://www.tutorialspoint.com/requirejs/requirejs_defining_function.htm" target="_blank" rel="noopener">https://www.tutorialspoint.com/requirejs/requirejs_defining_function.htm</a></p>
+<p>require.js official API:<br><a href="https://requirejs.org/docs/api.html" target="_blank" rel="noopener">https://requirejs.org/docs/api.html</a></p>
 
       
     </div>
@@ -263,7 +231,7 @@
     </p>
     <p class="copyright-item">
       <span>Link: </span>
-      <a href="https://lucaszeng99.github.io/2018/03/08/prospective/">https://lucaszeng99.github.io/2018/03/08/prospective/</a>
+      <a href="https://lucaszeng99.github.io/2018/09/16/jquery-note-define/">https://lucaszeng99.github.io/2018/09/16/jquery-note-define/</a>
     </p>
     <p class="copyright-item">
       <span>License: </span>
@@ -283,7 +251,7 @@
         
           <div class="post-tags">
             
-              <a href="/tags/others/">others</a>
+              <a href="/tags/javascript-jquery/">javascript, jquery</a>
             
           </div>
         
@@ -291,15 +259,15 @@
         
   <nav class="post-nav">
     
-      <a class="prev" href="/2018/03/15/algs4-weighted-quick-union/">
+      <a class="prev" href="/2018/09/18/vue-constructor/">
         <i class="iconfont icon-left"></i>
-        <span class="prev-text nav-default">algs4 weighted-quick-union</span>
+        <span class="prev-text nav-default">Vue and jQuery constructors</span>
         <span class="prev-text nav-mobile">Prev</span>
       </a>
     
     
-      <a class="next" href="/2018/03/06/markdown-basic/">
-        <span class="next-text nav-default">Markdown Basic</span>
+      <a class="next" href="/2018/04/06/Vue-list-array-ceveats/">
+        <span class="next-text nav-default">Vue List/Object Item Assignment</span>
         <span class="prev-text nav-mobile">Next</span>
         <i class="iconfont icon-right"></i>
       </a>

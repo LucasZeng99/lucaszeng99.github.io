@@ -17,12 +17,12 @@
 
 
 
-  <meta name="description" content="Markdown Basic"/>
+  <meta name="description" content="Vue and jQuery constructors"/>
 
 
 
 
-  <meta name="keywords" content="markdown, Lucas Zeng" />
+  <meta name="keywords" content="Vue, javascript, Lucas Zeng" />
 
 
 
@@ -42,7 +42,7 @@
 
 
 
-<link rel="canonical" href="https://lucaszeng99.github.io/2018/03/06/markdown-basic/"/>
+<link rel="canonical" href="https://lucaszeng99.github.io/2018/09/18/vue-constructor/"/>
 
 
 
@@ -89,7 +89,7 @@
   window.config = {"title":"Lucas Zeng","subtitle":null,"description":null,"author":"Lucas Zeng","language":"en","timezone":null,"url":"https://lucaszeng99.github.io","root":"/","permalink":":year/:month/:day/:title/","permalink_defaults":null,"source_dir":"source","public_dir":"public","tag_dir":"tags","archive_dir":"archives","category_dir":"categories","code_dir":"downloads/code","i18n_dir":":lang","skip_render":null,"new_post_name":":title.md","default_layout":"post","titlecase":false,"external_link":true,"filename_case":0,"render_drafts":false,"post_asset_folder":false,"relative_link":false,"future":true,"highlight":{"enable":true,"auto_detect":false,"line_number":true,"tab_replace":null,"first_line_number":"always1"},"default_category":"uncategorized","category_map":null,"tag_map":null,"date_format":"YYYY-MM-DD","time_format":"HH:mm:ss","per_page":10,"pagination_dir":"page","theme":"even","deploy":{"type":"git","repo":"https://github.com/LucasZeng99/lucaszeng99.github.io.git"},"ignore":[],"keywords":null,"index_generator":{"per_page":10,"order_by":"-date","path":""},"category_generator":{"per_page":10},"archive_generator":{"per_page":10,"yearly":true,"monthly":true,"daily":false},"tag_generator":{"per_page":10},"marked":{"gfm":true,"pedantic":false,"sanitize":false,"tables":true,"breaks":true,"smartLists":true,"smartypants":true,"modifyAnchors":"","autolink":true},"server":{"port":4000,"log":false,"compress":false,"header":true},"since":2017,"favicon":"/favicon.ico","rss":"default","menu":{"Home":"/","Archives":"/archives/","About":"/about"},"color":"cobalt blue","mode":"default","toc":true,"fancybox":true,"pjax":true,"copyright":{"enable":true,"license":"<a rel=\"license\" href=\"https://creativecommons.org/licenses/by-nc-nd/4.0/\" target=\"_blank\">CC BY-NC-ND 4.0</a>"},"reward":{"enable":false,"qrCode":{"wechat":null,"alipay":null}},"social":{"email":"lucaszeng99@gmail.com","stack-overflow":null,"twitter":"https://twitter.com/lucas_zzc","facebook":null,"linkedin":null,"google":null,"github":"https://github.com/LucasZeng99","weibo":null,"zhihu":null,"douban":null,"pocket":null,"tumblr":null,"instagram":null},"leancloud":{"app_id":null,"app_key":null},"baidu_analytics":null,"baidu_verification":null,"google_analytics":null,"google_verification":null,"disqus_shortname":null,"changyan":{"appid":null,"appkey":null},"livere_datauid":null,"version":"2.10.1"};
 </script>
 
-    <title> Markdown Basic - Lucas Zeng </title>
+    <title> Vue and jQuery constructors - Lucas Zeng </title>
   </head>
 
   <body><div id="mobile-navbar" class="mobile-navbar">
@@ -187,13 +187,13 @@
     <header class="post-header">
       <h1 class="post-title">
         
-          Markdown Basic
+          Vue and jQuery constructors
         
       </h1>
 
       <div class="post-meta">
         <span class="post-time">
-          2018-03-06
+          2018-09-18
         </span>
         
         
@@ -205,7 +205,7 @@
   <div class="post-toc" id="post-toc">
     <h2 class="post-toc-title">Contents</h2>
     <div class="post-toc-content">
-      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Text-body"><span class="toc-text">Text body</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Bold"><span class="toc-text">Bold</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Code-block"><span class="toc-text">Code block</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Bash-command"><span class="toc-text">Bash command</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Link"><span class="toc-text">Link</span></a></li></ol>
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#init-js"><span class="toc-text">init.js</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Notes"><span class="toc-text">Notes</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Quick-overview"><span class="toc-text">Quick overview</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#How-is-this-init-used"><span class="toc-text">How is this._init used?</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#How-is-this-initialization-different-from-Jquery"><span class="toc-text">How is this initialization different from Jquery?</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Why-is-this-different-and-important"><span class="toc-text">Why is this different and important?</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Conclusion"><span class="toc-text">Conclusion</span></a></li></ol>
     </div>
   </div>
 
@@ -213,24 +213,35 @@
 
     <div class="post-content">
       
-        <p>To write a heading or title in markdown, simply add # in the front.<br><code># your title</code></p>
-<p><code>## your subtitle</code></p>
-<a id="more"></a>
-<h2 id="Text-body"><a href="#Text-body" class="headerlink" title="Text body"></a>Text body</h2><p>To type in text, you don’t have to do anything extra.</p>
-<h2 id="Bold"><a href="#Bold" class="headerlink" title="Bold"></a>Bold</h2><p>To <strong>bold</strong> a word, add ** to both sides.</p>
-<p><code>**one or more words**</code></p>
-<h2 id="Code-block"><a href="#Code-block" class="headerlink" title="Code block"></a>Code block</h2><p>Quote your codes in two ` sign. (on the top left of your keyboard.)</p>
-<p><code>this is code block</code></p>
-<h2 id="Bash-command"><a href="#Bash-command" class="headerlink" title="Bash command"></a>Bash command</h2><p>You can use ` to wrap up a bash command block. </p>
-<p>a ` block can contain multiple lines of codes.</p>
-<blockquote>
-<p>example: </p>
+        <p>Reading the source code of Vue, I want to pause for a while in the beginning - constructor. To compare, jQuery was looked into, too…<br><a id="more"></a></p>
+<h2 id="init-js"><a href="#init-js" class="headerlink" title="init.js"></a>init.js</h2><blockquote>
+<p>src/core/instance/init.js</p>
 </blockquote>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ git status</span><br><span class="line">$ sudo apt-get update</span><br></pre></td></tr></table></figure>
-<h2 id="Link"><a href="#Link" class="headerlink" title="Link"></a>Link</h2><p>In the form  [<code>[name_of_your_link](link to the website)</code>]</p>
-<blockquote>
-<p>example : click <a href="www.github.com">here</a> to go to github.</p>
+<h3 id="Notes"><a href="#Notes" class="headerlink" title="Notes"></a>Notes</h3><ol>
+<li>initInternalComponent(vm, options) will be looked into later.</li>
+<li><code>child.extends</code>, line 381 to 403, how does vue merge the parent options?? to be looked into later.</li>
+</ol>
+<h3 id="Quick-overview"><a href="#Quick-overview" class="headerlink" title="Quick overview"></a>Quick overview</h3><p>Generally, the _init() function take the user-given options, resolve and regulate them into the Root Vue instance. </p>
+<p>normalize: normalize user-given props, inject, and directives.<br>These enable vue to tolerate more style of user-defined options in a component. After _init() and these filters, the option should be an object containing <code>props</code>, <code>inject</code> and <code>directives</code></p>
+<hr>
+<h2 id="How-is-this-init-used"><a href="#How-is-this-init-used" class="headerlink" title="How is this._init used?"></a>How is this._init used?</h2><blockquote>
+<p>src/core/instance/index.js</p>
 </blockquote>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Vue</span> (<span class="params">options</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">if</span> (process.env.NODE_ENV !== <span class="string">'production'</span> &amp;&amp;</span><br><span class="line">    !(<span class="keyword">this</span> <span class="keyword">instanceof</span> Vue)</span><br><span class="line">  ) &#123;</span><br><span class="line">    warn(<span class="string">'Vue is a constructor and should be called with the `new` keyword'</span>)</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">this</span>._init(options)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>this function Vue is a constructor. After inspecting the environment, it calls <code>_init(options)</code>, which, although not defined directly on Vue itself, was inherited from Vue.prototype._init() discussed above.</p>
+<p>Generaly, Vue._init() binds options to Vue object, and starts all functionalities of Vue.</p>
+<h2 id="How-is-this-initialization-different-from-Jquery"><a href="#How-is-this-initialization-different-from-Jquery" class="headerlink" title="How is this initialization different from Jquery?"></a>How is this initialization different from Jquery?</h2><blockquote>
+<p>from jQuery.js v3.3.1 line 135<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">jQuery = <span class="function"><span class="keyword">function</span>(<span class="params"> selector, context </span>) </span>&#123;</span><br><span class="line"></span><br><span class="line">		<span class="comment">// The jQuery object is actually just the init constructor 'enhanced'</span></span><br><span class="line">		<span class="comment">// Need init if jQuery is called (just allow error to be thrown if not included)</span></span><br><span class="line">		<span class="keyword">return</span> <span class="keyword">new</span> jQuery.fn.init( selector, context );</span><br><span class="line">	&#125;,</span><br></pre></td></tr></table></figure></p>
+</blockquote>
+<p>compared with Vue function, jQuery wrap up the <code>new</code> assignment in itself, and returning an object from the <code>new jQuery.fn.init()</code>.<br><code>jQuery.fn.init()</code> is hence the constructor for <code>$</code>, therefore <code>jQuery</code> or <code>$</code> could be looked as an alias of that constructor. Every time we use <code>$</code>, the constructor searches through the DOM and returns a jQuery object. </p>
+<p>In the case where:<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">menuButton = $(<span class="string">`#menu-btn`</span>)</span><br></pre></td></tr></table></figure></p>
+<p><code>$</code> passes the DOM item found and returned by <code>new jQuery.fn.init()</code> to the end user. (assigns it to <code>menuButton</code>).</p>
+<blockquote>
+<p>for Vue it’s one layer below.</p>
+</blockquote>
+<p>I can see that the most foundamental difference is that Vue exposes the constructor to end user, while jQuery executes it inside and allows only the function of querying to users.</p>
+<h2 id="Why-is-this-different-and-important"><a href="#Why-is-this-different-and-important" class="headerlink" title="Why is this different and important?"></a>Why is this different and important?</h2><p>I want to come back to this question later. Only one obvious thing I’ve noticed is that when other users are accessing the inner parts and trying to add more features, Vue seems to be clearer in structure. When I log out an instance of Vue, it is <code>funciton Vue</code> itself, not <code>jQuery.fn.init()</code>. But for other benefits and intentions, I have a long way to discover.</p>
+<h2 id="Conclusion"><a href="#Conclusion" class="headerlink" title="Conclusion"></a>Conclusion</h2><p>I haven’t really started to read into the detail, but an observation of the file structure and Vue’s way of exposing its global API. Hope this recording lasts.</p>
 
       
     </div>
@@ -246,7 +257,7 @@
     </p>
     <p class="copyright-item">
       <span>Link: </span>
-      <a href="https://lucaszeng99.github.io/2018/03/06/markdown-basic/">https://lucaszeng99.github.io/2018/03/06/markdown-basic/</a>
+      <a href="https://lucaszeng99.github.io/2018/09/18/vue-constructor/">https://lucaszeng99.github.io/2018/09/18/vue-constructor/</a>
     </p>
     <p class="copyright-item">
       <span>License: </span>
@@ -266,7 +277,7 @@
         
           <div class="post-tags">
             
-              <a href="/tags/markdown/">markdown</a>
+              <a href="/tags/Vue-javascript/">Vue, javascript</a>
             
           </div>
         
@@ -274,12 +285,12 @@
         
   <nav class="post-nav">
     
-      <a class="prev" href="/2018/03/18/nodejs/">
-        <i class="iconfont icon-left"></i>
-        <span class="prev-text nav-default">Server with Nodejs</span>
-        <span class="prev-text nav-mobile">Prev</span>
-      </a>
     
+      <a class="next" href="/2018/09/16/jquery-note-define/">
+        <span class="next-text nav-default">Jquery: How 'define' Works</span>
+        <span class="prev-text nav-mobile">Next</span>
+        <i class="iconfont icon-right"></i>
+      </a>
     
   </nav>
 
